@@ -1,0 +1,49 @@
+<html>
+	<head>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			function rainbowword(word2rainbow){
+
+				var htmlstuff = '';
+				for(var j=0;j<word2rainbow.length;j++)
+				{
+					color = '';
+					for(var i=0;i<4;i++)
+					{
+						decnumber = Math.floor(Math.random()*8+8);
+						hex = decnumber.toString(16);
+						color = color +hex;
+					}
+					color = '00' + color;
+					htmlstuff = htmlstuff + '<font size="'+Math.floor((Math.random())*0+7)+'", color="'+color+'">'+word2rainbow[j]+'</font>'
+				}
+				document.write(htmlstuff);
+			}
+			function rainbowcycleword(word2rainbow){
+
+				var htmlstuff = 'penis';
+				var color = '';
+				for(var i=0;i<2;i++)
+				{
+					decnumber = Math.floor(Math.random()*16);
+					hex = decnumber.toString(16);
+					color = color +hex;
+				}
+				color = '0000' + color;
+				htmlstuff = htmlstuff + '<font color="'+color+'">'+word2rainbow+'</font>'
+				// htmlstuff = htmlstuff + '<font color="'+color+'">'+word2rainbow[j]+'</font>'
+				// document.write(htmlstuff);
+				// document.write('<font color="'+color+'">hi</font>');
+			}
+			for(var i=0;i<50;i++)
+			{
+				rainbowword("Lana Antos");
+				document.write('<br>')
+			}
+			// document.write("<br>")
+			// rainbowword("Duke Lucky")
+		</script>
+	</body>
+</html>
